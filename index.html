@@ -15,10 +15,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap"
     rel="stylesheet">
   <script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
+  <link rel="stylesheet" href="//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
   <title>Ice Cream Shop - shopping cart</title>
 </head>
-
-<script src="app.js"></script>
 
 <!----------------------------------Navbar---------------------------------------------->
 
@@ -31,7 +30,7 @@
           <img src="/pink ice Cream Logo.png" width="120px">
         </div>
         <nav>
-          <ul>
+          <ul id="MenuItems">
             <li><a href="">HOME</a></li>
             <li><a href="">ORDER ONLINE</a></li>
             <li><a href="">OUR MENU</a></li>
@@ -40,7 +39,35 @@
             <li><a href="">CONTACT US</a></li>
           </ul>
         </nav>
-        <span class="iconify" data-icon="bx:bx-shopping-bag" data-width="45"></span>
+        <img src="/cart (1).png" width="35px" height="35px" class="cart-icon">
+        <img src="/menu-2.png" class="menu" onclick="menutoggle()">
+      </div>
+      <div class="cart">
+        <h2 class="cart-title">Your Cart</h2>
+        <div class="cart-content">
+          <!------------------cart-content-->
+          <div class="cart-box">
+            <img
+              src="https://images.pexels.com/photos/1362534/pexels-photo-1362534.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+              class="delete-icon" width="100%">
+            <div class="detail-box">
+              <div class="cart-product-title"></div>
+              <div class="cart-price">$25</div>
+              <input type="number" value="1" class="cart-quantity">
+              <img src="/delete-icon.png" class="delete-icon">
+
+              <!----remove cart-->
+            </div>
+          </div>
+          <div class="total">
+            <div class="total-title">Total</div>
+            <div class="total-price">#</div>
+          </div>
+          <!------buy button-->
+          <button type="button" class="btn-buy">Buy Now</button>
+          <!-----------Cart close-->
+          <img src="/cart-close-icon.png" class="close-cart">
+        </div>
       </div>
       <div class="row">
         <div class="col-2">
@@ -56,42 +83,115 @@
   </div>
 
   <!-------------------Featured Categories -------------------->
-  <div class="categories">
-    <div class="small-container">
-      <div class="row">
-        <div class="col-3">
-          <img
-            src="https://media.istockphoto.com/photos/ice-cream-picture-id500545362?k=20&m=500545362&s=612x612&w=0&h=47BAAM62P7qU-m8rZcAJVJcINlidqv5jxvKj58VVBtk="
-            width="250px">
-        </div>
-        <div class="col-3">
-          <img
-            src="https://media.istockphoto.com/photos/ice-cream-picture-id500545362?k=20&m=500545362&s=612x612&w=0&h=47BAAM62P7qU-m8rZcAJVJcINlidqv5jxvKj58VVBtk="
-            width="250px">
-        </div>
-        <div class="col-3">
-          <img
-            src="https://media.istockphoto.com/photos/ice-cream-picture-id500545362?k=20&m=500545362&s=612x612&w=0&h=47BAAM62P7qU-m8rZcAJVJcINlidqv5jxvKj58VVBtk="
-            width="250px">
+  <Main>
+    <div class="categories">
+      <div class="small-container">
+        <div class="row">
+          <div class="col-3">
+            <img
+              src="https://media.istockphoto.com/photos/ice-cream-picture-id500545362?k=20&m=500545362&s=612x612&w=0&h=47BAAM62P7qU-m8rZcAJVJcINlidqv5jxvKj58VVBtk="
+              width="250px">
+          </div>
+          <div class="col-3">
+            <img
+              src="https://media.istockphoto.com/photos/ice-cream-picture-id500545362?k=20&m=500545362&s=612x612&w=0&h=47BAAM62P7qU-m8rZcAJVJcINlidqv5jxvKj58VVBtk="
+              width="250px">
+          </div>
+          <div class="col-3">
+            <img
+              src="https://media.istockphoto.com/photos/ice-cream-picture-id500545362?k=20&m=500545362&s=612x612&w=0&h=47BAAM62P7qU-m8rZcAJVJcINlidqv5jxvKj58VVBtk="
+              width="250px">
+          </div>
         </div>
       </div>
     </div>
-  </div>
-
+  </Main>
 
   <!-------------------Featured products -------------------->
   <div class="small-container">
-    <h2>Featured Products</h2>
+    <h2 class="title">Featured Products</h2>
     <div class="row">
       <div class="col-4">
-        <img src="" alt="">
+        <img
+          src="https://images.pexels.com/photos/1362534/pexels-photo-1362534.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+        <h4>Strawberry Ice Cream</h4>
+        <p>$10.00</p>
+      </div>
+      <div class="col-4">
+        <img
+          src="https://images.pexels.com/photos/1362534/pexels-photo-1362534.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+        <h4>Strawberry Ice Cream</h4>
+        <p>$10.00</p>
+      </div>
+      <div class="col-4">
+        <img
+          src="https://images.pexels.com/photos/1362534/pexels-photo-1362534.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+        <h4>Strawberry Ice Cream</h4>
+        <p>$10.00</p>
+      </div>
+      <div class="col-4">
+        <img
+          src="https://images.pexels.com/photos/1362534/pexels-photo-1362534.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+        <h4>Strawberry Ice Cream</h4>
+        <p>$10.00</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-------------------Latest Flavors -------------------->
+  <div class="small-container">
+    <h2 class="title">Latest Flavors</h2>
+    <div class="row">
+      <div class="col-4">
+        <img
+          src="https://media-cldnry.s-nbcnews.com/image/upload/t_fit-1500w,f_auto,q_auto:best/newscms/2021_27/1746707/ice-cream-day-mc-main-210709.jpeg">
+        <h4>Strawberry Ice Cream</h4>
+        <p>$10.00</p>
+      </div>
+      <div class="col-4">
+        <img
+          src="https://media-cldnry.s-nbcnews.com/image/upload/t_fit-1500w,f_auto,q_auto:best/newscms/2021_27/1746707/ice-cream-day-mc-main-210709.jpeg">
+        <h4>Strawberry Ice Cream</h4>
+        <p>$10.00</p>
+      </div>
+      <div class="col-4">
+        <img
+          src="https://media-cldnry.s-nbcnews.com/image/upload/t_fit-1500w,f_auto,q_auto:best/newscms/2021_27/1746707/ice-cream-day-mc-main-210709.jpeg">
+        <h4>Strawberry Ice Cream</h4>
+        <p>$10.00</p>
+      </div>
+      <div class="col-4">
+        <img
+          src="https://media-cldnry.s-nbcnews.com/image/upload/t_fit-1500w,f_auto,q_auto:best/newscms/2021_27/1746707/ice-cream-day-mc-main-210709.jpeg">
+        <h4>Strawberry Ice Cream</h4>
+        <p>$10.00</p>
       </div>
     </div>
   </div>
 
 
 
+  <!----------------js for toggle menu--------------->
+  <script>
+    var MenuItems = document.getElementById("MenuItems");
 
+    MenuItems.style.maxHeight = "0px"
+
+    function menutoggle() {
+      if (MenuItems.style.maxHeight == "0px") {
+        MenuItems.style.maxHeight = "200px";
+      }
+      else {
+        MenuItems.style.maxHeight = "0px";
+      }
+    }
+
+  </script>
+
+
+
+  <script src="app.js"></script>
 </body>
 
 </html>
